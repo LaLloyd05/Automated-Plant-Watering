@@ -1,0 +1,35 @@
+#ECE 1000 Automatic Water Plant System: Hannah Poston, Lydia Garrett, Lloyd Galvez
+from machine import ADC, Pin
+import utime
+
+# This is saying that we have connected the data pin of the sensor to the GPIO 27 pin (which is one of the ADC pins!)
+soil_probe = ADC(Pin(27))
+relay_pin = Pin(13,Pin.OUT)
+
+# Before we can show the moisture as a percentage, need to first get the minimum moisture value (when the probe is not in water) and the maximum moisture value (when the probe is in water)
+max_moisture = 27574
+min_moisture = 57100
+
+# This function will fit the moisture level of the sensor to a line equation from ~0% to ~100% using the min and max moisture value measured with the sensor 
+def get_moisture_percentage(moisture_level):
+    point_1_x = min_moisture
+    point_2_x = max_moisture
+    point_1_y = 0
+    point_2_y = 100
+    m = ((point_2_y - point_1_y) / (point_2_x - point_1_x))
+    return int((m*moisture_level) - (m*min_moisture) + point_1_y)
+
+# Now, forever (while True:), read the value from the moisture sensor, convert it to a percentage, and display in the shell for users to see
+while True: 
+    moisture_level = soil_probe.read_u16()
+    
+    # This will fit the data from the soil moisture probe to a line equation between ~0% moisture and ~100% moisture
+    moisture_level_percentage = get_moisture_percentage(moisture_level)
+    
+    print(moisture_level_percentage)
+    if (moisture_level_percentage < 30):
+        relay_pin.value(0)
+    if (moisture_level_percentage > 30):
+        relay_pin.value(1)
+    
+    utime.sleep(0.8)
