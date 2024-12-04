@@ -29,8 +29,8 @@ Micro Python
 University - Contributor 
 
 # Repo Guide 
- * Final Report Summary File - 
+ * Final Report Summary File:
 
- * Micro Python Code - 
+ * Micro Python Code: 
 
- * Pictures and Videos - 
+ * Pictures and Videos: 
