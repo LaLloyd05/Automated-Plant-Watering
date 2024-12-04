@@ -18,19 +18,19 @@ Micro Python
 
 
 # Pictures and Videos
-*Final System Video:
+ * Final System Video:
 
-*Picture of the final system can be found below:
+ * Picture of the final system can be found below:
 
 # Who Are We? Dr. Indril Bhattacharya's ECE 1000 Final Class Project Team
-*Lloyd Galvez:  Sophmore currently studying/majoring Electrical Engineering - Tennessee Technological  University - Contributor
-*Hannah Poston:  Freshmen currently studying/majoring Electrical Engineering - Tennessee Technological University - Contributor
-*Lydia Garrett:  Freshmen currently studying/majoring Electrical Engineering - Tennessee Technological
+ * Lloyd Galvez:  Sophmore currently studying/majoring Electrical Engineering - Tennessee Technological  University - Contributor
+ * Hannah Poston:  Freshmen currently studying/majoring Electrical Engineering - Tennessee Technological University - Contributor
+ * Lydia Garrett:  Freshmen currently studying/majoring Electrical Engineering - Tennessee Technological
 University - Contributor 
 
 # Repo Guide 
-*Final Report Summary File - 
+ * Final Report Summary File - 
 
-*Micro Python Code - 
+ * Micro Python Code - 
 
-*Pictures and Videos - 
+ * Pictures and Videos - 
